@@ -20,7 +20,7 @@ require('events').EventEmitter.defaultMaxListeners = Infinity;
 client.on("ready", async () => {
    client.user.setPresence({ activity: { name: config.Durum }, status: "dnd" });
   let botVoiceChannel = client.channels.cache.get(config.botVoiceChannel);
-  if (botVoiceChannel) botVoiceChannel.join().catch(err => console.error("Bot ses kanalına bağlanamadı!"));
+  if (botVoiceChannel) botVoiceChannel.join().catch(err => console.error("Bot ses kanalına bağlanamadı."));
 });
 
 client.login(config.token).catch(err => console.log('Tokene bağlanamadım. Lütfen değiştir veya yeni token gir'));
